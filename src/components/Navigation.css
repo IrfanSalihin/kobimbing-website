@@ -1,0 +1,128 @@
+/* navigation.css */
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #01919A;
+  position: relative; /* Ensure positioning context for absolute children */
+  z-index: 1000; /* Set a z-index higher than the banner */
+}
+
+.logo-container {
+  margin-right: auto;
+}
+
+.logo {
+  height: 70px;
+  cursor: pointer;
+  padding-top: 5px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline;
+  transition: transform 0.3s ease;
+  position: relative; /* Make the li relative for absolute positioning */
+}
+
+.nav-links li:hover {
+  transform: scale(1.1);
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1500;
+  min-width: 200px;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+/* Dropdown styling */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1500;
+  min-width: 200px;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+/* Dropdown styling */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1500;
+  min-width: 200px;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+/* Dropdown link styling */
+.dropdown a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  padding: 12px 20px; /* Increased padding for better clickability */
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for dropdown links */
+.dropdown a:hover {
+  background-color: #f0f0f0; /* Lighter background color on hover */
+}
+
+/* Show dropdown when hovering over parent li */
+.nav-links li:hover .dropdown {
+  opacity: 1;
+}
+
+/* Add some spacing between dropdown links */
+.dropdown a + a {
+  margin-top: 8px; /* Increased spacing between dropdown links */
+}

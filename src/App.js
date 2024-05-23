@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Banner from './components/Banner';
+import Navigation from './components/Navigation';
+import Tentang from './components/Tentang';
+import Keanggotaan from './components/Keanggotaan';
+import Perniagaan from './components/Perniagaan';
+import Utama from './components/Utama'; 
+import Lain from './components/Lain';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="app">
+        <Navigation />
+        <Banner />
+        <Routes>
+          <Route path="/" element={<Utama />} />
+          <Route path="/tentang" element={<Tentang />} />
+          <Route path="/keanggotaan" element={<Keanggotaan />} />
+          <Route path="/perniagaan" element={<Perniagaan />} />
+          <Route path="/lain" element={<Lain />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

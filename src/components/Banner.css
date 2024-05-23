@@ -1,0 +1,36 @@
+/* banner.css */
+
+.banner {
+  background: #333;
+  color: #fff;
+  overflow: hidden; /* Ensure no overflow */
+  width: 100%; /* Full width */
+  height: 50vh; /* Set height to 25% of the viewport height */
+  max-width: 100%; /* Max width to prevent stretching */
+  margin: 0 auto; /* Center the banner */
+  position: relative; /* Make sure the banner contains the slider */
+  padding: 0; /* Remove padding for a tighter fit */
+  display: flex; /* Use flexbox to center the content */
+  align-items: center; /* Center vertically */
+  z-index: 100; /* Ensure banner is behind dropdown */
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%; /* Make slider full width */
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box; /* Ensure padding and borders are included in width */
+  text-align: center; /* Center align the images */
+  flex-shrink: 0; /* Prevent slides from shrinking */
+}
+
+.slide img {
+  width: 100%; /* Ensure images fill the slide */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  margin: 0 auto; /* Center images */
+}
